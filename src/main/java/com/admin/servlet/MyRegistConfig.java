@@ -24,7 +24,7 @@ public class MyRegistConfig {
 
         MyFilter myFilter = new MyFilter();
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(myFilter);
-        filterRegistrationBean.setUrlPatterns(Arrays.asList("/my","/css/*"));
+        filterRegistrationBean.setUrlPatterns(Arrays.asList("/my","/css/*")); //要过滤的请求
         return filterRegistrationBean;
     }
 

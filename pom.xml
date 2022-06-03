@@ -29,7 +29,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--<dependency>
+        <!--
+             JDBC(Java Database Connectivity): 是一组接口, 是Sun公司定义的
+             给数据库厂商进行实现用的。如果想要通过java语言连接你的数据库, 那么实现我的接口吧！
+         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency> mybatis依赖包以有-->
@@ -48,6 +51,9 @@
             <version>1.1.17</version>
         </dependency>
 
+        <!--mysql-connector-java是MySQL数据库厂商为了可以
+           让程序员通过java技术连接到mysql数据库进行增删改查操作,则内部实现了JDBC的一组接口
+           是在JDBC官方jar基础上进行的实现和开发-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

@@ -17,6 +17,8 @@ public class MyFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         log.info("MyFilter工作");
+
+        //对用户请求进行预处理,符合条件的请求才能进入下一过滤点(没有下个过滤点就直接到控制器那)
         filterChain.doFilter(servletRequest,servletResponse);
     }
 

@@ -47,10 +47,12 @@ spring:
 
 # 配置mybatis规则
 mybatis:
-  mapper-locations: classpath:mybatis/mapper/*.xml  #sql映射文件位置
-  configuration:
+  mapper-locations: classpath:mapper/*.xml  #sql映射文件位置
+  configuration:     #对应着mybatis的配置文件-mybatis-config.xml
     map-underscore-to-camel-case: true              #开启驼峰命名规则
-# config-location: classpath:mybatis/mybatis-config.xml 可以不写mybatis的配置文件,所有配置文件的配置都放在configuration配置项中即可
+
+# config-location: classpath:mybatis-config.xml 可以不写mybatis的配置文件,所有配置文件的配置都放在上面的configuration配置项中即可
+#configuration配置项和配置文件mybatis-config.xml不能同时有,会冲突！
 
 
 #management 是所有actuator的配置
@@ -64,6 +66,7 @@ management:
   endpoint:
     health:
       show-details: always  #总是显示详细信息
+
 
 #定制info信息(详细信息)
 info:
